@@ -1,0 +1,730 @@
+/* ==========================================================================
+   0. normalize.css v3.0.3 | MIT License | git.io/normalize | (minified)
+   ========================================================================== */
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+body { margin: 0; }
+article, aside, details,
+figcaption, figure,
+footer, header,
+main, menu, nav,
+section, summary { display:block; }
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+audio:not([controls]) { display: none; height: 0; }
+[hidden], template { display: none; }
+a { background-color: transparent;}
+a:active, a:hover { outline: 0; }
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+dfn { font-style: italic; }
+/*h1 { font-size: 2em; margin: 0.67em 0; }*/
+mark { background: #ff0; color: #000; }
+small { font-size: 80%; }
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+img { border: 0; }
+svg:not(:root) { overflow: hidden; }
+/*figure { margin: 1em 40px; }*/
+/*hr { box-sizing: content-box; height: 0; }*/
+pre { overflow: auto; }
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+button { overflow: visible; }
+button, select { text-transform: none; }
+button, html input[type="button"],
+input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+button[disabled], html input[disabled] { cursor: default; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+input { line-height: normal; }
+input[type="checkbox"],
+input[type="radio"] { box-sizing: border-box; padding: 0; }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button { height: auto; }
+input[type="search"] { -webkit-appearance: textfield; }
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+legend { border: 0; padding: 0; }
+textarea { overflow: auto; }
+optgroup { font-weight: bold; }
+table{ border-collapse: collapse; border-spacing: 0; }
+td, th{ padding: 0; }
+
+
+/* ---------------------------------------------------------------
+  CASPER Styles - some may not be used
+----------------------------------------------------------------*/
+
+/* Every post, on every page, gets this style on its <article> tag */
+.post {
+    position: relative;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+body:not(.post-template) .post-title {
+  font-size: 2rem;
+}
+
+.post-title a {
+    text-decoration: none;
+    color: #2E2E2E;
+}
+
+.post-excerpt p {
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.7em;
+}
+
+.read-more {
+    text-decoration: none;
+}
+
+.post-meta {
+    display: inline-block;
+    font-size: 0.9rem;
+    line-height: 1;
+    color: #9EABB3;
+}
+
+.post-excerpt a {
+    display: inline-block;
+    font-size: 0.9rem;
+    line-height: 1;
+    text-decoration: none;
+    color: #2E2E2E;
+}
+
+.post-exerpt a:hover{
+  text-decoration: underline;
+}
+
+.author-thumb {
+    width: 24px;
+    height: 24px;
+    float: left;
+    margin-right: 9px;
+    border-radius: 100%;
+}
+
+.post-meta a {
+    color: #9EABB3;
+    text-decoration: none;
+}
+
+.post-meta a:hover {
+    text-decoration: underline;
+}
+
+.user-meta {
+    position: relative;
+    padding: 0.3rem 40px 0 100px;
+    min-height: 77px;
+}
+
+.post-date {
+    display: inline-block;
+    color: #9EABB3;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    white-space: nowrap;
+}
+
+.user-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.user-name {
+    display: block;
+    font-weight: 700;
+}
+
+.user-bio {
+    display: block;
+    max-width: 440px;
+    font-size: 1.4rem;
+    line-height: 1.5em;
+}
+
+.publish-meta {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4.3rem 0 4rem 0;
+    text-align: right;
+}
+
+.publish-heading {
+    display: block;
+    font-weight: 700;
+}
+
+.publish-date {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.5em;
+}
+
+h2{
+  margin:0;
+}
+
+
+/* ==========================================================================
+   5. Single Post - When you click on an individual post
+   ========================================================================== */
+
+.post-template .post-title {
+    margin-bottom: 0;
+    margin-top:0;
+    color: #2E2E2E;
+    font-size: 2rem;
+}
+
+.post-template .post-meta {
+    margin: 0;
+}
+
+.post-template .post-date {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+/* Stop elements, such as img wider than the post content, from
+   creating horizontal scroll - slight hack due to imperfections
+   with browser width % calculations and rounding */
+.post-template .content {
+    overflow: hidden;
+}
+
+/* Tweak the .post wrapper style */
+.post-template .post {
+    margin-top: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Kill that stylish little circle that was on the border, too */
+.post-template .post:after {
+    display: none;
+}
+
+.post-content{
+      color: #3A4145;
+      word-break: inherit;
+}
+
+.post-content p{
+  margin-top: 0.75em;
+  max-width:100%;
+}
+
+/* Keep images centered, and allow images wider than the main
+   text column to break out. */
+.post-content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    padding: 0.6em 0;
+    /* Centers an image by (1) pushing its left edge to the
+       center of its container and (2) shifting the entire image
+       in the opposite direction by half its own width.
+       Works for images that are larger than their containers. */
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%); /* for Safari and iOS */
+    -ms-transform: translateX(-50%); /* for IE9 */
+    transform: translateX(-50%);
+}
+
+.footnotes {
+    font-style: italic;
+    font-size: 1.3rem;
+    line-height: 1.6em;
+}
+
+.footnotes li {
+    margin: 0.6rem 0;
+}
+
+.footnotes p {
+    margin: 0;
+}
+
+.footnotes p a:last-child {
+    text-decoration: none;
+}
+
+
+/* The author credit area after the post */
+.post-footer {
+    position: relative;
+    margin: 6rem 0 0 0;
+    padding: 3rem 0 0 0;
+    border-top: #EBF2F6 1px solid;
+}
+
+.post-footer h4 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.post-footer p {
+    margin: 1rem 0;
+    font-size: 1.4rem;
+    line-height: 1.75em;
+}
+
+/* list of author links - location / url */
+.author-meta {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 1.4rem;
+    line-height: 1;
+    font-style: italic;
+    color: #9EABB3;
+}
+
+.author-meta a {
+    color: #9EABB3;
+}
+.author-meta a:hover {
+    color: #111;
+}
+
+/* Create some space to the right for the share links */
+.post-footer .author {
+    margin-right: 180px;
+}
+
+.post-footer h4 a {
+    color: #2e2e2e;
+    text-decoration: none;
+}
+
+.post-footer h4 a:hover {
+    text-decoration: underline;
+}
+
+/* Drop the share links in the space to the right.
+   Doing it like this means it's easier for the author bio
+   to be flexible at smaller screen sizes while the share
+   links remain at a fixed width the whole time */
+.post-footer .share {
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    width: 140px;
+}
+
+.post-footer .share a {
+    font-size: 1.8rem;
+    display: inline-block;
+    margin: 1rem 1.6rem 1.6rem 0;
+    color: #BBC7CC;
+    text-decoration: none;
+}
+
+.post-footer .share .icon-twitter:hover {
+    color: #55acee;
+}
+.post-footer .share .icon-facebook:hover {
+    color: #3b5998;
+}
+.post-footer .share .icon-google-plus:hover {
+    color: #dd4b39;
+}
+
+/* ---------------------------------------------------------------
+  RavenBox Styles
+----------------------------------------------------------------*/
+
+body{
+background:url("http://yesofcorsa.com/wp-content/uploads/2015/08/1426_half-life_2.jpg");
+background-repeat:no-repeat;
+background-attachment: fixed;
+}
+
+#main{
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translate(-50%);
+  width:100%;
+  max-width:1000px;
+}
+
+/*title section*/
+.title{
+  background:rgba(0, 0, 0, 0.75);
+  height:95px;
+  /*the title is aways in the vertical middle*/
+  line-height: 95px;
+  vertical-align: middle;
+  color:white;
+  font-family: 'Open Sans', sans-serif;font-weight:300;font-size: 52.5px;text-align:center;}
+
+.title span{
+  font-weight:700;
+}
+
+/*navbar*/
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #e2e2e2;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:700;
+    padding-left:16px;
+    padding-right:16px;
+    max-height:40px;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color:#202020;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navbar li a:not(.active){
+  padding: 9px/* 16px*/;
+}
+
+.navbar li a:hover:not(.active) {
+    background-color: #111;
+    color:white;
+}
+
+.active{padding-top:7px;}
+.active img {width:26px;opacity:0.3;}
+.active img:hover{opacity:1;}
+
+/*carousel*/
+#owl-demo .item{
+  overflow:hidden;
+}
+
+#owl-demo .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#bar{
+  width: 0%;
+  max-width: 100%;
+  height: 5px;
+  background: #3086e7;
+}
+#progressBar{
+  width: 100%;
+  background: #9a9a9a;
+}
+
+.coruja{
+  width:100%;
+  max-width:1000px;
+}
+
+/*post area*/
+.po-div{
+  margin-top:7px;
+  padding-bottom:30px;
+  background:white;
+  width:100%;
+  max-width:1000px;
+  font-family: 'Open Sans', sans-serif;
+  overflow:hidden;
+}
+
+.po-area{
+  position:relative;
+  width: 69.6%;
+  float:left;
+}
+
+.po-side{
+  position:relative;
+  width:268px;
+  float:right;
+}
+
+.po-area nav{
+    margin-top: 1.5em;
+    color: #9EABB3;
+    font-size: 0.78rem;
+}
+
+.author-credits{
+  width:100%;
+}
+
+.author-credits img{
+  width: 100px;
+  padding-right: 20px;
+  padding-bottom: 4px;
+  /* padding-left: 4px; */
+  vertical-align: middle;
+  float: left;
+}
+
+.author-credits aside{
+  display: inline;margin-top:4px;vertical-align:top;
+}
+
+.separator{
+  margin-top: 1.4rem;
+  height: 1.4rem;
+}
+
+.sepatator-line{
+  width: 100%;
+  max-width: 710px;
+  border-bottom: #EBF2F6 1px solid;
+}
+
+.separator-post{
+  margin-top: 1rem;
+  height: 1rem;
+}
+
+/*footer*/
+.r-footer{
+  background:rgba(0,0,0,0.75);
+  color:white;
+  font-family: 'Open Sans', sans-serif;
+  width:100%;
+  max-width:1000px;
+  height:140px;
+}
+
+.r-footer-logo{
+  position:absolute;
+  line-height:140px;
+  vertical-align:middle;
+  padding-left:25px;
+  font-weight:300;
+  font-size: 40px;
+  max-width:100%;
+}
+
+.r-footer-logo span{
+  font-weight:700;
+}
+
+.test{
+  position:relative;
+  overflow: hidden;
+  padding-left:265px;
+  padding-top:10px;
+}
+
+.test aside{
+  float:left;
+  height:auto;
+  margin-right:50px;
+  font-size:12px;
+  text-align: justify;
+  text-justify: inter-word;
+  color:white;
+}
+
+.credits{
+  position:absolute;
+  line-height:140px;
+  padding-left: 30px;
+  padding-top:43px;
+  font-size:10px;
+  max-width:100%;
+  opacity:0;
+}
+
+.credits:hover{
+  opacity:1;
+}
+
+.credits a {
+  text-decoration:none;
+  font-weight: bold;
+  color:white;
+}
+
+/*author page*/
+.author-head{
+  width:100%;
+  max-width:1000px;
+  height:200px;
+  color:white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.author-head img{
+  position:relative;
+  width:100px;
+  top:85px;
+  left:9px;
+  border: 3px solid white;
+  box-shadow: 0 0 5px  rgba(0,0,0,0.75);
+}
+
+.author-head aside{
+  position: absolute;
+  left: 135px;
+  top: 218px;
+  padding-right: 10px;
+  text-shadow: 0 0 5px rgba(0,0,0,0.6);
+}
+
+.fundao{
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.7);
+}
+
+.author-name{
+  font-size: 1.2rem;
+}
+
+.author-desc{
+  font-size: 0.9rem;
+}
+
+.author-head  i{ vertical-align: middle;padding-bottom: 3px;    margin-right: 2.7px; }
+
+.mob{
+  display:none;
+}
+
+/* ---------------------------------------------------------------
+  RavenBox Mobile
+----------------------------------------------------------------*/
+
+@media only screen and (max-width: 900px) {
+
+.po-side{
+  display:none;
+}
+
+.po-area{
+  width: 100%;
+}
+
+body:not(.post-template) .post-title{
+  font-size: 1.4rem;
+}
+
+}
+
+@media only screen and (max-width: 500px) {
+.pc{
+  display:none;
+}
+
+.mob{
+  display:block;
+  font-size:24px;
+  margin-right: 7px;
+}
+
+.navbar li a:not(.active){
+  padding: 3px 3px 3px 3px;
+}
+
+.active{
+  padding: 2px 5px 5px 5px;
+  font-size: 25px;
+}
+
+.test{
+  padding:0;
+}
+
+.test aside{
+  display:none;
+}
+
+.r-footer{
+  height: 100px;
+}
+
+.test{
+  height: 100px;
+}
+
+.r-footer-logo{
+  padding-left: 15px;
+  line-height: 90px;
+}
+
+.credits{
+  position: relative;
+  opacity:1;
+  padding:0;
+  padding-left: 15px;
+}
+
+.author-head aside{
+  top:150px;
+}
+
+.author-name{
+  font-size:0.9rem;
+}
+
+.author-desc{
+  font-size:0.8rem;
+}
+}
+
+@media only screen and (max-width: 350px) {
+  .coruja{
+    display:none;
+  }
+
+  .po-div{
+    margin-top:0;
+  }
+
+.author-desc a{
+  display:none;
+}
+
+.author-head aside{
+  top:185px;
+}
+}

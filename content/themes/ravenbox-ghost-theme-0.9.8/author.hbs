@@ -1,0 +1,89 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- The big featured header --}}
+{{#author}}
+<div id="main">
+
+<div class="title"><a href="{{@blog.url}}" style="text-decoration:none;color: inherit;">raven<span>box</span></a></div>
+
+<div class="navbar">
+  <ul>
+    <li class="pc"><a href="#">HOME</a></li>
+    <li class="pc"><a href="#">HOME</a></li>
+    <li class="pc"><a href="#">IT'S WHAT I LONG FOR</a></li>
+    <li class="mob"><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+    <li class="mob"><a href="#"><i class="fa fa-code" aria-hidden="true"></i></a></li>
+    <li class="mob"><a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+    <li style="float:right;max-height:40px;"><a class="active" href="#">
+    <img src="http://i.imgur.com/CHQmnaK.png" style="margin-right:8px;" class="pc"/>
+    <img src="http://i.imgur.com/vFuMeGq.png" style="margin-right:8px;" class="pc"/>
+    <img src="http://i.imgur.com/xxck1Ep.png" style="margin-bottom:4px;" class="pc"/>
+    </a></li>
+    <li style="float:right;max-height:40px;"class="mob"><a class="active" href="#" style="margin-right: -22px;">
+    <i class="fa fa-facebook-official" aria-hidden="true" style="margin-right:8px;"></i>
+    <i class="fa fa-twitter" aria-hidden="true" style="margin-right:8px;"></i>
+    <i class="fa fa-youtube-play" aria-hidden="true" style="margin-bottom:4px;"></i>
+    </a></li>
+  </ul>
+</div>
+
+<div class="author-head" style="background:url({{cover}});">
+<div class="fundao">
+<img src="{{image}}"/>
+<aside class="author-desc"><b class ="author-name">{{name}}</b>
+<br>
+{{bio}}<br><br>
+<a href="{{website}}" style="text-decoration:none;color:inherit;"><i class="fa fa-globe" aria-hidden="true" style="font-size:24px;"></i> Website</a>
+<a href="{{facebook}}" style="text-decoration:none;color:inherit;margin-left: 8px;"><i class="fa fa-facebook-official" aria-hidden="true" style="font-size:24px"></i> Facebook</a>
+<a href="{{twitter}}" style="text-decoration:none;color:inherit;margin-left: 8px;"><i class="fa fa-twitter" aria-hidden="true" style="font-size:24px"></i> Twitter</a>
+</aside>
+</span>
+</div>
+</div>
+{{/author}}
+<div class="po-div" style="margin-top: 0;">
+<div style="margin-top:20px;margin-right:20px;margin-left:20px;">
+<div class="po-area">
+{{> "loop"}}
+</div>
+<div class="po-side">
+<img src="http://placehold.it/268x500">
+</div>
+</div>
+</div>
+<div class="r-footer">
+<aside class="r-footer-logo">
+raven<span>box</span>
+</aside>
+<div class="test">
+    <aside style="width:160px;">
+    <b>About Us</b><br>
+Sed sit amet dignissim lorem. Vivamus nisl tortor, fringilla nec justo a, lobortis suscipit magna. Integer efficitur vestibulum ipsum, sua mae. <b>Read More ...</b>
+    </aside>
+    <aside>
+    <b>Site Map</b>
+    <span style="font-weight: 600;">
+    <br>HOME
+    <br>NEWS
+    <br>ARTICLES
+    <br>ABOUT US
+    <br>FORUM
+    </span>
+    </aside>
+    <aside>
+    <b>Contact Us</b>
+    <span style="font-weight: 600;">
+    <br>FACEBOOK
+    <br>TWITTER
+    <br>YOUTUBE
+    <br>STEAM
+    <br>E-MAIL
+    </span>
+    </aside>
+    <span class="credits">Made with &hearts; by <a href="https://github.com/Salies" target="_blank"><b>Salies</b></a>, listening to <a href="https://www.youtube.com/watch?v=QrV61ATP3Ec" target="_blank">Dystopia</a> and <a href="https://www.youtube.com/watch?v=cvJcot3pUgI" target="_blank">LTE.</a></span>
+</div>
+</div>
+</div>
+</body>
+</html>
